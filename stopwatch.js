@@ -1,4 +1,5 @@
 let hr = 0, min = 0, sec = 0
+let stopwatch
 
 function startStopwatch() {
     stopwatch = setInterval(() => {
@@ -37,28 +38,15 @@ function resetStopwatch() {
     watchSecond.textContent = sec
 }
 
-analogBtn.addEventListener('click', () => {
-    open(analogClock)
-    startAnalogClock()
+stopwatchPlayBtn.addEventListener('click', () => {
+    if (stopwatchPlayBtn.checked) {
+        startStopwatch()
+    }
+    else {
+        stopStopwatch()
+    }
 })
 
-digitalBtn.addEventListener('click', () => {
-    open(digitalClock)
-    startDigitalClock()
-})
-
-stopwatchBtn.addEventListener('click', () => {
-    open(stopwatchClock)
-    stopwatchPlayBtn.addEventListener('click', () => {
-        if (stopwatchPlayBtn.checked) {
-            startStopwatch()
-        }
-        else {
-            stopStopwatch()
-        }
-    })
-
-    stopwatchResetBtn.addEventListener('click', () => {
-        resetStopwatch()
-    })
+stopwatchResetBtn.addEventListener('click', () => {
+    resetStopwatch()
 })
