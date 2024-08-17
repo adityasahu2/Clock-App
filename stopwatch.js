@@ -1,58 +1,64 @@
-let stopwatchInterval;
-let isRunning = false;
-let elapsedTime = 0;
-let startTime = 0;
+let hr = 0, min = 0, sec = 0
 
-// Function to update the stopwatch display
-function updateStopwatchDisplay() {
-    const totalSeconds = Math.floor(elapsedTime / 1000);
-    const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, "0");
-    const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, "0");
-    const seconds = String(totalSeconds % 60).padStart(2, "0");
-
-    watchHour.textContent = hours;
-    watchMinute.textContent = minutes;
-    watchSecond.textContent = seconds;
-}
-
-// Function to start the stopwatch
 function startStopwatch() {
-    startTime = Date.now() - elapsedTime; // Resume from where it left off
-    stopwatchInterval = requestAnimationFrame(updateStopwatch);
-    isRunning = true;
+    stopwatch = setInterval(() => {
+        if (sec >= 0) {
+            sec++
+            if (sec < 10) sec = "0" + sec
+            watchSecond.textContent = sec
+            if (sec == 60) {
+                sec = "00"
+                min++
+                if (min < 10) min = "0" + min
+                watchMinute.textContent = min
+                if (min == 60) {
+                    min = "00"
+                    hr++
+                    if (hr < 10) hr = "0" + hr
+                    watchHour.textContent = hr
+                }
+            }
+        }
+    }, 1000)
 }
 
-// Function to stop the stopwatch
 function stopStopwatch() {
-    cancelAnimationFrame(stopwatchInterval);
-    isRunning = false;
+    clearInterval(stopwatch)
 }
 
-// Stopwatch update function using requestAnimationFrame
-function updateStopwatch() {
-    if (isRunning) {
-        elapsedTime = Date.now() - startTime;
-        updateStopwatchDisplay();
-        stopwatchInterval = requestAnimationFrame(updateStopwatch);
-    }
+function resetStopwatch() {
+    stopwatchPlayBtn.checked = false
+    clearInterval(stopwatch)
+    hr = "00"
+    min = "00"
+    sec = "00"
+    watchHour.textContent = hr
+    watchMinute.textContent = min
+    watchSecond.textContent = sec
 }
 
-// Event listener for Play/Pause button
-stopwatchPlayBtn.addEventListener("change", function () {
-    if (this.checked) {
-        startStopwatch();
-    } else {
-        stopStopwatch();
-    }
-});
+analogBtn.addEventListener('click', () => {
+    open(analogClock)
+    startAnalogClock()
+})
 
-// Event listener for Reset button
-stopwatchResetBtn.addEventListener("click", function () {
-    stopStopwatch();
-    elapsedTime = 0;
-    updateStopwatchDisplay();
-    stopwatchPlayBtn.checked = false;
-});
+digitalBtn.addEventListener('click', () => {
+    open(digitalClock)
+    startDigitalClock()
+})
 
-// Initialize stopwatch display
-updateStopwatchDisplay();
+stopwatchBtn.addEventListener('click', () => {
+    open(stopwatchClock)
+    stopwatchPlayBtn.addEventListener('click', () => {
+        if (stopwatchPlayBtn.checked) {
+            startStopwatch()
+        }
+        else {
+            stopStopwatch()
+        }
+    })
+
+    stopwatchResetBtn.addEventListener('click', () => {
+        resetStopwatch()
+    })
+})
