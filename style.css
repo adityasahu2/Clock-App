@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Popins', sans-serif;
+    user-select: none;
+    color: rgb(120, 95, 134);
+}
+
+.center1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom right, rgb(212, 165, 165), rgb(124, 124, 178));
+    overflow: hidden;
+}
+
+img {
+    width: 20px;
+}
+
+/* circles */
+.flex-bg {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    z-index: -10;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+#circle1 {
+    background: radial-gradient(rgb(130, 130, 218) 0%, rgb(130, 130, 218) 20%, rgb(160, 160, 212) 100%);
+    box-shadow: 0px 0px 10px rgb(91, 91, 152);
+    animation: circle 30s infinite ease-in-out alternate;
+}
+
+#circle2 {
+    background: radial-gradient(rgb(220, 125, 125) 0%, rgb(220, 125, 125) 20%, rgb(214, 161, 161) 100%);
+    box-shadow: 0px 0px 10px rgb(134, 80, 80);
+    animation: circle 30s infinite ease-in-out alternate-reverse;
+}
+
+@keyframes circle {
+    0% {
+        transform: translateX(-30vw);
+    }
+
+    100% {
+        transform: translateX(30vw);
+    }
+}
+
+/* heading */
+#nav {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 50px;
+    border-radius: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5),
+        inset 0px 0px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+a {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    text-decoration: none;
+    display: block;
+    height: 50px;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px;
+    transition: all .2s ease;
+}
+
+a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}

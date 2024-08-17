@@ -1,0 +1,290 @@
+/* analog clock */
+#clock-face {
+    width: 80vh;
+    height: 80vh;
+    padding: 2rem;
+    border-radius: 50%;
+    border: 7px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255, 0.5),
+        inset 0px 0px 15px rgb(114, 114, 114);
+}
+
+#markers {
+    width: 100%;
+    height: 100%;
+}
+
+.cross {
+    width: 5px;
+    height: 97%;
+    background-color: rgb(106, 106, 210);
+    top: 1.5%;
+    border-radius: 2.5px;
+}
+
+.sec-cross {
+    width: 3px;
+    height: 97%;
+    background-color: rgb(208, 126, 126);
+    top: 1.5%;
+    left: calc(50% + .75px);
+    border-radius: 1.5px;
+}
+
+.min-cross {
+    width: 1px;
+    height: 97%;
+    background-color: rgb(120, 95, 134);
+    top: 1.5%;
+    left: calc(50% + 2px);
+    border-radius: .5px;
+}
+
+#min-cross1 {
+    transform: rotate(6deg);
+}
+
+#min-cross2 {
+    transform: rotate(12deg);
+}
+
+#min-cross3 {
+    transform: rotate(18deg);
+}
+
+#min-cross4 {
+    transform: rotate(24deg);
+}
+
+#min-cross5 {
+    transform: rotate(36deg);
+}
+
+#min-cross6 {
+    transform: rotate(42deg);
+}
+
+#min-cross7 {
+    transform: rotate(48deg);
+}
+
+#min-cross8 {
+    transform: rotate(54deg);
+}
+
+#min-cross9 {
+    transform: rotate(66deg);
+}
+
+#min-cross10 {
+    transform: rotate(72deg);
+}
+
+#min-cross11 {
+    transform: rotate(78deg);
+}
+
+#min-cross12 {
+    transform: rotate(84deg);
+}
+
+#min-cross13 {
+    transform: rotate(96deg);
+}
+
+#min-cross14 {
+    transform: rotate(102deg);
+}
+
+#min-cross15 {
+    transform: rotate(108deg);
+}
+
+#min-cross16 {
+    transform: rotate(114deg);
+}
+
+#min-cross17 {
+    transform: rotate(126deg);
+}
+
+#min-cross18 {
+    transform: rotate(132deg);
+}
+
+#min-cross19 {
+    transform: rotate(138deg);
+}
+
+#min-cross20 {
+    transform: rotate(144deg);
+}
+
+#min-cross21 {
+    transform: rotate(156deg);
+}
+
+#min-cross22 {
+    transform: rotate(162deg);
+}
+
+#min-cross23 {
+    transform: rotate(168deg);
+}
+
+#min-cross24 {
+    transform: rotate(174deg);
+}
+
+#min-cover {
+    width: 93%;
+    height: 93%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.5); */
+    backdrop-filter: blur(10px);
+}
+
+#cross1 {
+    transform: rotate(90deg)
+}
+
+#cross2 {
+    transform: rotate(0deg)
+}
+
+#cross3 {
+    transform: rotate(30deg)
+}
+
+#cross4 {
+    transform: rotate(60deg)
+}
+
+#cross5 {
+    transform: rotate(120deg)
+}
+
+#cross6 {
+    transform: rotate(150deg)
+}
+
+#mark-circle {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(100px);
+    color: rgb(120, 95, 134);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#mark-circle>div {
+    position: absolute;
+    margin: 10px;
+}
+
+#one {
+    top: 6%;
+    right: 24%;
+}
+
+#two {
+    top: 23%;
+    right: 7%;
+}
+
+#three {
+    top: 46%;
+    right: 0;
+}
+
+#four {
+    bottom: 23%;
+    right: 7%;
+}
+
+#five {
+    bottom: 6%;
+    right: 24%;
+}
+
+#six {
+    left: 47.5%;
+    bottom: 0;
+}
+
+#seven {
+    bottom: 6%;
+    left: 24%;
+}
+
+#eight {
+    bottom: 23%;
+    left: 7%;
+}
+
+#nine {
+    top: 46%;
+}
+
+#ten {
+    top: 23%;
+    left: 7%;
+}
+
+#eleven {
+    top: 6%;
+    left: 24%;
+}
+
+#twelve {
+    top: 0;
+    left: 46.5%;
+}
+
+#pointer {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(120, 95, 134);
+}
+
+#hour-hand {
+    height: 150px;
+    width: 5px;
+    top: calc(50% - 120px);
+    left: calc(50% - 1.5px);
+    background-color: rgb(106, 106, 210);
+    transform-origin: 50% 120px;
+    transform: rotate(0deg);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+#minute-hand {
+    height: 200px;
+    width: 3px;
+    top: calc(50% - 170px);
+    left: calc(50% - 1.2px);
+    background-color: rgb(120, 95, 134);
+    transform-origin: 50% 170px;
+    transform: rotate(180deg);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+#second-hand {
+    height: 250px;
+    width: 2px;
+    top: calc(50% - 220px);
+    left: calc(50% - 1.2px);
+    background-color: rgb(208, 126, 126);
+    transform-origin: 50% 220px;
+    transform: rotate(90deg);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}

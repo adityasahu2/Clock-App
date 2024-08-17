@@ -1,0 +1,40 @@
+#timer-clock {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+#set-hr,
+#set-min,
+#set-sec {
+    padding-bottom: 0;
+    height: 80%;
+    margin: 40px;
+    border-radius: 30px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+span {
+    padding: 10px;
+    display: block;
+}
+
+#set-time {
+    overflow: hidden;
+}
+
+#set-time>.time {
+    scroll-snap-type: y mandatory;
+}
+
+.time>span {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+#time {
+    display: none;
+}

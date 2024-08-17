@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="digital.css">
+    <link rel="stylesheet" href="stopwatch.css">
+    <link rel="stylesheet" href="timer.css">
+</head>
+
+<body>
+    <div id="timer-clock">
+        <div class="flex-bg">
+            <div class="circle" id="circle1"></div>
+            <div class="circle" id="circle2"></div>
+        </div>
+        <div class="box center1" id="time">
+            <div class="time" id="timer-hour">00</div>
+            <div class="separator">:</div>
+            <div class="time" id="timer-minute">00</div>
+            <div class="separator">:</div>
+            <div class="time" id="timer-second">00</div>
+        </div>
+        <div class="menu center1">
+            <div id="play-pause-container">
+                <input type="checkbox" id="play-pause2" class="play-pause-checkbox">
+                <label for="play-pause2" class="play-pause-label" id="stopwatch-play-pause">
+                    <img src="play.svg" id="play-icon" alt="">
+                    <img src="pause.svg" id="pause-icon" alt="">
+                </label>
+            </div>
+            <div id="reset-container">
+                <input type="reset" id="reset-button2" class="reset-button">
+                <label for="reset-button2" class="reset-label">
+                    <img src="reset.svg" id="reset-icon" alt="">
+                </label>
+            </div>
+        </div>
+        <div class="box center1" id="set-time">
+            <div class="time" id="set-hr"></div>
+            <div class="separator">:</div>
+            <div class="time" id="set-min"></div>
+            <div class="separator">:</div>
+            <div class="time" id="set-sec"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="timer.js"></script>
+</body>
+
+</html>

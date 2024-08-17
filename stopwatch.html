@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="digital.css">
+    <link rel="stylesheet" href="stopwatch.css">
+</head>
+
+<body>
+    <div id="stopwatch-clock">
+        <div class="flex-bg">
+            <div class="circle" id="circle1"></div>
+            <div class="circle" id="circle2"></div>
+        </div>
+        <div class="box center1">
+            <div class="time" id="watch-hour">00</div>
+            <div class="separator">:</div>
+            <div class="time" id="watch-minute">00</div>
+            <div class="separator">:</div>
+            <div class="time" id="watch-second">00</div>
+        </div>
+        <div class="menu center1">
+            <div id="play-pause-container">
+                <input type="checkbox" id="play-pause1" class="play-pause-checkbox">
+                <label for="play-pause1" class="play-pause-label" id="stopwatch-play-pause">
+                    <img src="play.svg" id="play-icon" alt="">
+                    <img src="pause.svg" id="pause-icon" alt="">
+                </label>
+            </div>
+            <div id="reset-container">
+                <input type="reset" id="reset-button1" class="reset-button">
+                <label for="reset-button1" class="reset-label">
+                    <img src="reset.svg" id="reset-icon" alt="">
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="stopwatch.js"></script>
+</body>
+
+</html>
