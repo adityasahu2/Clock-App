@@ -168,6 +168,7 @@ function startTimer() {
             timerHour.textContent = hr
         }
         else {
+            timerPlayBtn.checked = false
             clearInterval(timer)
         }
     }, 1000);
